@@ -142,4 +142,4 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-**Maintained by [Your Name/Organization]**
+**Maintained by Hafiz Muhammaa**
