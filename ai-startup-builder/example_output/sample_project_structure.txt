@@ -1,0 +1,11 @@
+project_scaffold_v1/
+├── .env                  # Environment template
+├── README.md             # Auto-generated project documentation
+├── backend/              # Core backend architecture
+│   ├── __init__.py
+│   ├── main.py           # FastAPI entry point
+│   ├── core/             # Shared logic
+│   ├── db/               # Persistence layer
+│   └── api/              # Route definitions
+├── requirements.txt      # Dependency manifest
+└── docker-compose.yml    # Container orchestration (optional scaffold)

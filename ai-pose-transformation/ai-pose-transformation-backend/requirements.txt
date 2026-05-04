@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+python-dotenv
+cryptography
+mediapipe
+opencv-python
+numpy
+pydantic
+python-jose
+passlib
+websockets

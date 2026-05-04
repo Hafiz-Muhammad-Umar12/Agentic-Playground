@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+python-dotenv
+langchain
+langgraph
+openai
+pytest
+httpx

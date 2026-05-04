@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "AI Pose Camera",
+    "slug": "ai-pose-camera",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourname.aiposecamera",
+      "infoPlist": {
+        "NSCameraUsageDescription": "AI Pose Camera needs camera access for real-time pose detection and analysis.",
+        "NSMicrophoneUsageDescription": "Microphone access for video recording."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "com.yourname.aiposecamera",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "AI Pose Camera needs camera access for real-time pose detection."
+        }
+      ]
+    ],
+    "scheme": "aiposecamera",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

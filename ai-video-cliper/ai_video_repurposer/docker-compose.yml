@@ -1,0 +1,69 @@
+version: "3.9"
+
+services:
+  # ── FastAPI Backend ─────────────────────────────────────────
+  api:
+    build: .
+    container_name: video_repurposer_api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - ./:/app
+      - /tmp/video_repurposer:/tmp/video_repurposer
+    depends_on:
+      - mysql
+      - redis
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  # ── Celery Worker ───────────────────────────────────────────
+  worker:
+    build: .
+    container_name: video_repurposer_worker
+    env_file: .env
+    volumes:
+      - ./:/app
+      - /tmp/video_repurposer:/tmp/video_repurposer
+    depends_on:
+      - mysql
+      - redis
+    command: celery -A app.workers.celery_app worker --loglevel=info -Q video,publish --concurrency=2
+    restart: unless-stopped
+
+  # ── Celery Flower (monitoring) ──────────────────────────────
+  flower:
+    build: .
+    container_name: video_repurposer_flower
+    env_file: .env
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+    command: celery -A app.workers.celery_app flower --port=5555
+    restart: unless-stopped
+
+  # ── MySQL ──────────────────────────────────────────────────
+  mysql:
+    image: mysql:8.0
+    container_name: video_repurposer_mysql
+    environment:
+      MYSQL_DATABASE: video_repurposer
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+  # ── Redis ────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: video_repurposer_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  mysql_data:

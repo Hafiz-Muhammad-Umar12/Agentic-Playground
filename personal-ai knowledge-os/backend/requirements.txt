@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+pydantic-settings
+httpx
+loguru
+groq
+qdrant-client
+sentence-transformers
+torch # required for sentence-transformers

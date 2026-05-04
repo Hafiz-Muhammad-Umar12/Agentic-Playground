@@ -1,0 +1,9 @@
+[project]
+name = "multi-agent-research-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tenacity>=9.1.4",
+]
