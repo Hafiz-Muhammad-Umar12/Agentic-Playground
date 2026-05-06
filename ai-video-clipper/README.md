@@ -34,7 +34,7 @@ The system operates as a distributed pipeline of specialized agents:
 ## 🖼️ Product Showcases
 
 <div align="center">
-  <img src="assests/signup.png" width="30%" alt="User Authentication"/>
+  <img src="ai-video-clipper/ai_video_repurposer/assets/processing.png" width="30%" alt="User Authentication"/>
   <img src="assests/processing.png" width="30%" alt="AI Processing Pipeline"/>
   <img src="assests/setting.png" width="30%" alt="Agent Configurations"/>
 </div>
@@ -142,4 +142,4 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-**Maintained by [Your Name/Organization]**
+**Maintained by Hafiz Muhammaa**
