@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+qdrant-client
+celery
+redis
+pandas
+numpy
+matplotlib
+seaborn
+python-multipart
+python-dotenv
