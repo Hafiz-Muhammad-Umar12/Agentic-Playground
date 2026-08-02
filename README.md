@@ -99,7 +99,7 @@ However, ideas, feedback, and improvements are always welcome.
 
 If you're interested in collaboration or opportunities:
 
-- GitHub: [Hafiz-Muhammad-Umar12]
+- GitHub: [Hafiz-Muhammad-umar-dev]
 - Email: [umarshabbir.ai@gmail.com]
 
 ---
